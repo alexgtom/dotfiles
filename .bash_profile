@@ -1,15 +1,10 @@
 alias ls='ls -G'
 alias ll='ls -l'
-export SAASBOOK=saasbook@192.168.56.101
-
 export PATH=$PATH:/usr/local/texlive/2012/bin/universal-darwin
 export PATH=/usr/local/bin:$PATH
 export PATH=~/bin:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=~/StaticAnalyzer:$PATH
-export STAFFREPOS=svn+ssh://cs164-repo/staff
-export MYREPOS=svn+ssh://cs164-repo/cs164-cy
-export TEAMREPOS=svn+ssh://cs164-repo/AJV
 export EDITOR=vi
 
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
@@ -42,3 +37,8 @@ PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+parse_git_branch() {
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
