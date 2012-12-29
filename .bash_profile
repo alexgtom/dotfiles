@@ -1,11 +1,17 @@
 alias ls='ls -G'
 alias ll='ls -l'
+
+export ANDROIDSDK=~/adt-bundle-mac-x86_64/sdk
+export EDITOR=vi
+
 export PATH=$PATH:/usr/local/texlive/2012/bin/universal-darwin
 export PATH=/usr/local/bin:$PATH
 export PATH=~/bin:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=~/StaticAnalyzer:$PATH
-export EDITOR=vi
+export PATH=~/StaticAnalyzer:$PATH
+export PATH=$ANDROIDSDK/platform-tools:$PATH
+export PATH=$ANDROIDSDK/tools:$PATH
 
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
 ##
