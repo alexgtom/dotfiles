@@ -198,7 +198,7 @@ highlight SpellBad ctermbg=red ctermfg=white
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Line length
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-highlight LineOverflow ctermbg=red ctermfg=white guibg=#592929
+highlight LineOverflow ctermbg=blue ctermfg=white guibg=#592929
 let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
 autocmd VimEnter * autocmd WinEnter * let w:created=1
 autocmd VimEnter * let w:created=1
