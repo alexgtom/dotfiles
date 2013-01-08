@@ -51,6 +51,7 @@ syntax on
 call pathogen#infect()
 " Allow the cursor to go in to "invalid" places
 "set virtualedit=all
+set autochdir "automomatically cd into the directory that the file is in
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 	Word Wrap
@@ -73,7 +74,7 @@ set undolevels=1000
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Key Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-	map <F10> :TlistToggle<CR>
+map <F10> :TlistToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Compiler Mappings
