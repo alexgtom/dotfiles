@@ -47,11 +47,17 @@ set dir=~/.vimbackup
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Misc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set bs=2
 syntax on
 call pathogen#infect()
 " Allow the cursor to go in to "invalid" places
 "set virtualedit=all
-set autochdir "automomatically cd into the directory that the file is in
+
+" automomatically cd into the directory that the file is in
+set autochdir 
+
+" ignore these files while expanding wild chars
+set wildignore=*.o,*.class,*.pyc
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 	Word Wrap
@@ -70,6 +76,18 @@ autocmd FileType tex setlocal spell spelllang=en_us
 set history=1000
 set undolevels=1000
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	Omni Completition	
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable omni completion. (Ctrl-X Ctrl-O)
+autocmd FileType ejs,html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType c set omnifunc=ccomplete#Complete
+autocmd FileType java set omnifunc=javacomplete#Complete
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Key Mappings
@@ -207,3 +225,8 @@ let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
 autocmd VimEnter * autocmd WinEnter * let w:created=1
 autocmd VimEnter * let w:created=1
 autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1) | endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	CommandT
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let CommandTMaxFiles = 20000
