@@ -327,6 +327,7 @@ compiler-output-customization	latex-suite.txt	/*compiler-output-customization*
 compiler-rules	latex-suite.txt	/*compiler-rules*
 compiling-multiple	latex-suite.txt	/*compiling-multiple*
 completion-window-preferences	latex-suite.txt	/*completion-window-preferences*
+cs	surround.txt	/*cs*
 custom-macros-menu	latex-suite.txt	/*custom-macros-menu*
 custom-packages	latex-suite.txt	/*custom-packages*
 customize-alt-key-maps	latex-suite.txt	/*customize-alt-key-maps*
@@ -347,6 +348,7 @@ description	latexhelp.txt	/*description*
 diacritic-mappings	latex-suite.txt	/*diacritic-mappings*
 displaymath	latexhelp.txt	/*displaymath*
 draft	latexhelp.txt	/*draft*
+ds	surround.txt	/*ds*
 editing-folding	latex-suite.txt	/*editing-folding*
 empty	latexhelp.txt	/*empty*
 enabling-searching	latex-suite.txt	/*enabling-searching*
@@ -373,6 +375,8 @@ forward-searching	latex-suite.txt	/*forward-searching*
 greek-letter-mappings	latex-suite.txt	/*greek-letter-mappings*
 headings	latexhelp.txt	/*headings*
 hyph-	latexhelp.txt	/*hyph-*
+i_CTRL-G_S	surround.txt	/*i_CTRL-G_S*
+i_CTRL-G_s	surround.txt	/*i_CTRL-G_s*
 im_1	imaps.txt	/*im_1*
 imaps-usage	imaps.txt	/*imaps-usage*
 imaps.txt	imaps.txt	/*imaps.txt*
@@ -896,6 +900,13 @@ sub-sup	latexhelp.txt	/*sub-sup*
 subscripts	latexhelp.txt	/*subscripts*
 superscripts	latexhelp.txt	/*superscripts*
 supporting-packages	latex-suite.txt	/*supporting-packages*
+surround	surround.txt	/*surround*
+surround-customizing	surround.txt	/*surround-customizing*
+surround-issues	surround.txt	/*surround-issues*
+surround-mappings	surround.txt	/*surround-mappings*
+surround-replacements	surround.txt	/*surround-replacements*
+surround-targets	surround.txt	/*surround-targets*
+surround.txt	surround.txt	/*surround.txt*
 tab'	latexhelp.txt	/*tab'*
 tab+	latexhelp.txt	/*tab+*
 tab-	latexhelp.txt	/*tab-*
@@ -910,6 +921,17 @@ theorem	latexhelp.txt	/*theorem*
 titlepage	latexhelp.txt	/*titlepage*
 twocolumn	latexhelp.txt	/*twocolumn*
 twoside	latexhelp.txt	/*twoside*
+vS	surround.txt	/*vS*
 verbatim	latexhelp.txt	/*verbatim*
 verse	latexhelp.txt	/*verse*
+vgS	surround.txt	/*vgS*
 why-IMAP	latex-suite.txt	/*why-IMAP*
+xml-plugin-callbacks	xml-plugin.txt	/*xml-plugin-callbacks*
+xml-plugin-html	xml-plugin.txt	/*xml-plugin-html*
+xml-plugin-mappings	xml-plugin.txt	/*xml-plugin-mappings*
+xml-plugin-settings	xml-plugin.txt	/*xml-plugin-settings*
+xml-plugin.txt	xml-plugin.txt	/*xml-plugin.txt*
+yS	surround.txt	/*yS*
+ySS	surround.txt	/*ySS*
+ys	surround.txt	/*ys*
+yss	surround.txt	/*yss*
