@@ -23,6 +23,13 @@ set smartindent
 set autoindent
 set hlsearch
 
+"   Language specfic tab settings
+autocmd FileType python 		set softtabstop=4 shiftwidth=4 expandtab 
+autocmd FileType html 			set softtabstop=2 shiftwidth=2 expandtab 
+autocmd FileType css 			set softtabstop=2 shiftwidth=2 expandtab 
+autocmd FileType ejs 			set softtabstop=2 shiftwidth=2 expandtab 
+autocmd FileType javascript 	set softtabstop=2 shiftwidth=2 expandtab 
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 	Mappings
@@ -50,6 +57,7 @@ call pathogen#infect()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set formatoptions=l
 set lbr
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 	Spell Check
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -71,24 +79,19 @@ set undolevels=1000
 "	Compiler Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"if filereadable("Makefile")
-"	map <F5> :make<CR>
-"else
-	autocmd FileType c map <F5> :call CompileRunGcc()<CR>
-	autocmd FileType c map <F6> :call DebugGcc()<CR>
-	autocmd FileType cpp map <F5> :call CompileRunGpp()<CR>
-	autocmd FileType cpp map <F6> :call DebugGpp()<CR>
-	autocmd FileType php map <F5> :!php -l %<CR>
-	autocmd FileType java map <F5> :call CompileRunJava()<CR>
-	autocmd FileType tex map <F6> :call CompileViewLatex()<CR>
-	autocmd FileType tex map <F8> :call CompilePdfLatex()<CR>
-	autocmd FileType python map <F5> :call CompileRunPy()<CR>
-	autocmd FileType lg map <F5> :call CompileRunLg()<CR>
-	autocmd FileType ruby map <F5> :call CompileRunRb()<CR>
-	autocmd FileType python map <F6> :call PyDoctest()<CR>
-	autocmd FileType python map <F4> :call PyInteractive()<CR>
-	autocmd FileType python set softtabstop=4 shiftwidth=4 expandtab 
-"endif
+autocmd FileType c map <F5> :call CompileRunGcc()<CR>
+autocmd FileType c map <F6> :call DebugGcc()<CR>
+autocmd FileType cpp map <F5> :call CompileRunGpp()<CR>
+autocmd FileType cpp map <F6> :call DebugGpp()<CR>
+autocmd FileType php map <F5> :!php -l %<CR>
+autocmd FileType java map <F5> :call CompileRunJava()<CR>
+autocmd FileType tex map <F6> :call CompileViewLatex()<CR>
+autocmd FileType tex map <F8> :call CompilePdfLatex()<CR>
+autocmd FileType python map <F5> :call CompileRunPy()<CR>
+autocmd FileType lg map <F5> :call CompileRunLg()<CR>
+autocmd FileType ruby map <F5> :call CompileRunRb()<CR>
+autocmd FileType python map <F6> :call PyDoctest()<CR>
+autocmd FileType python map <F4> :call PyInteractive()<CR>
 
 func! CompileViewLatex()
 	exec "w"
@@ -196,7 +199,7 @@ highlight clear SpellBad
 highlight SpellBad ctermbg=red ctermfg=white
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	Line length
+"	Highlight lines over line length in light blue
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 highlight LineOverflow ctermbg=blue ctermfg=white guibg=#592929
 let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
