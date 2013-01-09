@@ -1,6 +1,9 @@
 default: install
 
-install: update xmledit
+install: symlink update xmledit
+
+symlink:
+	ln -s $(HOME)/.vim/vimrc $(HOME)/.vimrc
 
 xmledit:
 	cd ftplugin ; \
