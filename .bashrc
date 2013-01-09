@@ -7,10 +7,11 @@ export EDITOR=vi
 
 export ANDROIDSDK=~/adt-bundle-mac-x86_64/sdk
 
-export PATH=$PATH:/usr/local/texlive/2012/bin/universal-darwin
-export PATH=~/bin:$PATH
 export PATH=$ANDROIDSDK/platform-tools:$PATH
 export PATH=$ANDROIDSDK/tools:$PATH
+export PATH=$PATH:/usr/local/texlive/2012/bin/universal-darwin
+export PATH=/usr/local/bin:$PATH
+export PATH=~/bin:$PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 

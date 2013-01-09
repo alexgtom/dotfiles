@@ -2,11 +2,7 @@ VIMHOME=~/.vim
 
 default: install
 
-install: symlink submodule
-
-submodule: 
-	cd $$VIMHOME ; 
-	git submodule update --init
+install: symlink 
 
 # creates symbolic links in ~ to all the dotfile (and directories) in this 
 # directory
