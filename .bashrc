@@ -3,25 +3,14 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lf='ls -f'
 
-export ANDROIDSDK=~/adt-bundle-mac-x86_64/sdk
 export EDITOR=vi
 
+export ANDROIDSDK=~/adt-bundle-mac-x86_64/sdk
+
 export PATH=$PATH:/usr/local/texlive/2012/bin/universal-darwin
-export PATH=/usr/local/bin:$PATH
 export PATH=~/bin:$PATH
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export PATH=~/StaticAnalyzer:$PATH
-export PATH=~/StaticAnalyzer:$PATH
 export PATH=$ANDROIDSDK/platform-tools:$PATH
 export PATH=$ANDROIDSDK/tools:$PATH
-
-test -r /sw/bin/init.sh && . /sw/bin/init.sh
-
-# Setting PATH for MacPython 2.5
-export PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
-
-# Setting PATH for Python 2.7
-export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
