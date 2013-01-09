@@ -128,10 +128,10 @@ autocmd FileType ruby map <F5> :call CompileRunRb()<CR>
 autocmd FileType python map <F6> :call PyDoctest()<CR>
 autocmd FileType python map <F4> :call PyInteractive()<CR>
 
-func! CompileViewLatex()
-	exec "w"
-	exec "!pdflatex %"
-endfunc
+"func! CompileViewLatex()
+"	exec "w"
+"	exec "!pdflatex %"
+"endfunc
 
 func! CompileRunGcc()
  	exec "w"
@@ -169,7 +169,11 @@ endfunc
 func! CompileViewLatex()
 	exec "w"
 	call Tex_CompileLatex()
-	call Tex_ForwardSearchLaTeX()
+	call ViewLatex()
+endfunc
+
+func! ViewLatex()
+	exec '!xdvi -editor "vim --servername 'v:servername' --remote-wait +\%l \%f" -sourceposition ' . line(".") . substitute(expand('%:p'),expand(Tex_GetMainFileName(':p:h')).'\/','','') . " " . expand(Tex_GetMainFileName(':p:r')) . ".dvi &" 
 endfunc
 
 func! CompilePdfLatex()
@@ -211,11 +215,18 @@ set printoptions=syntax:n,number:n,header:0,paper:letter,formfeed:y
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 	vim-latexsuite
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor='latex'
-let g:Tex_ViewRule_dvi='xdvi'
-let g:Tex_CompileRule_dvi='latex --src-specials -interaction=nonstopmode $*'
+"set grepprg=grep\ -nH\ $*
+"let g:tex_flavor='latex'
+"let g:Tex_ViewRule_dvi='xdvi'
+"let g:Tex_CompileRule_dvi='latex --src-specials -interaction=nonstopmode $*'
+"let g:Tex_UseMakefile=0
+
+let g:tex_flavor = "latex"
 let g:Tex_UseMakefile=0
+let g:Tex_DefaultTargetFormat = 'dvi'
+let g:Tex_CompileRule_dvi='latex --src-specials -interaction=nonstopmode $*'
+"let g:Tex_ViewRule_dvi = 'xdvi -editor "vim  --servername xdvi --remote +\%l \%f" $* &'
+"let g:Tex_ViewRuleComplete_dvi = 'xdvi -editor "vim --servername xdiv --remote +\%l \%f" $* &'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Changes comment color
