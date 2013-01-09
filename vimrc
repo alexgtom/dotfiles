@@ -245,3 +245,5 @@ autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '
 "	CommandT
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let CommandTMaxFiles = 20000
+nnoremap <silent> <Leader>t :CommandT<CR>
+nnoremap <silent> <Leader>b :CommandTBuffer<CR>
