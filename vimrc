@@ -1,9 +1,38 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	Misc
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" backspace fix
+set bs=2
+
+" pathogen
+execute pathogen#infect()
+
+" Allow the cursor to go in to "invalid" places
+"set virtualedit=all
+
+" automomatically cd into the directory that the file is in
+set autochdir 
+
+" ignore these files while expanding wild chars
+set wildignore=*.o,*.class,*.pyc
+
 set nocompatible
 set ruler
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	Syntax
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax on
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 	Color Scheme
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "let &t_Co=256
 "set background=dark
 "colorscheme solarized
 "let g:solarized_termcolors=256
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 	User
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -44,20 +73,6 @@ set pastetoggle=<F3>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set dir=~/.vimbackup
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	Misc
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set bs=2
-syntax on
-call pathogen#infect()
-" Allow the cursor to go in to "invalid" places
-"set virtualedit=all
-
-" automomatically cd into the directory that the file is in
-set autochdir 
-
-" ignore these files while expanding wild chars
-set wildignore=*.o,*.class,*.pyc
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 	Word Wrap
