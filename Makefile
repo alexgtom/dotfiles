@@ -14,6 +14,7 @@ symlink:
 	find . -maxdepth 1 -name ".*" \
 		-not -name ".git" \
 		-not -name ".gitmodules" \
+		-not -name ".gitignore" \
 		-not -name "." \
 		-not -name ".." \
 		-print0 | \
