@@ -1,0 +1,3 @@
+[submodule "autoload/vim-pathogen"]
+	path = autoload/vim-pathogen
+	url = git://github.com/tpope/vim-pathogen.git
