@@ -6,6 +6,7 @@
 set bs=2
 
 " pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 " Allow the cursor to go in to "invalid" places
@@ -28,7 +29,7 @@ syntax on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 	Color Scheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let &t_Co=256
+let &t_Co=256
 "set background=dark
 "colorscheme solarized
 "let g:solarized_termcolors=256
@@ -247,3 +248,16 @@ autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '
 let CommandTMaxFiles = 20000
 nnoremap <silent> <Leader>t :CommandT<CR>
 nnoremap <silent> <Leader>b :CommandTBuffer<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	Fugitive
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufReadPost fugitive://* set bufhidden=delete
+"set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	Powerline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:Powerline_symbols = 'compatible'
+set encoding=utf8
+set laststatus=2
