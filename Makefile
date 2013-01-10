@@ -2,7 +2,10 @@ VIMHOME=~/.vim
 
 default: install
 
-install: symlink 
+install: symlink packages
+
+packages:
+	brew install git bash-completion
 
 # creates symbolic links in ~ to all the dotfile (and directories) in this 
 # directory
