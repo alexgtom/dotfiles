@@ -2,6 +2,9 @@
 "	Misc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" change the mapleader from \ to ,
+let mapleader=","
+
 " backspace fix
 set bs=2
 
@@ -20,6 +23,7 @@ set wildignore=*.o,*.class,*.pyc
 
 set nocompatible
 set ruler
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Syntax
@@ -64,9 +68,11 @@ autocmd FileType javascript 	set softtabstop=2 shiftwidth=2 expandtab
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 	Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <F7> :TlistToggle<CR>
-map <F8> :NERDTreeToggle<CR> 
+map <leader>tl :TlistToggle<CR>
+map <leader>n :NERDTreeToggle<CR> 
 set pastetoggle=<F3>
+map <leader>o :BufExplorer<cr>
+map <leader>m :MRU<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
