@@ -1,7 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	Misc
+" => General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " change the mapleader from \ to ,
 let mapleader=","
 
@@ -12,52 +11,72 @@ set bs=2
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
-" Allow the cursor to go in to "invalid" places
-"set virtualedit=all
-
 " automomatically cd into the directory that the file is in
 set autochdir 
 
 " ignore these files while expanding wild chars
 set wildignore=*.o,*.class,*.pyc
 
+" history
+set history=1000
+set undolevels=1000
+
+" compatbility with vi
 set nocompatible
+
+" bottom ruler
 set ruler
 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	Syntax
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" syntax
 syntax on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 	Color Scheme
+" => Color Scheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let &t_Co=256
+colorscheme molokai
+let g:molokai_original=0
 "set background=dark
 "colorscheme solarized
 "let g:solarized_termcolors=256
 
+" override comment color
+"highlight Comment ctermfg=blue
+
+" override Search color
+highlight Search ctermfg=black ctermbg=yellow
+
+" backup dir
+set dir=~/.vimbackup
+
+" Highlight lines over line length in light blue
+highlight LineOverflow ctermbg=blue ctermfg=white guibg=#592929
+let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
+autocmd VimEnter * autocmd WinEnter * let w:created=1
+autocmd VimEnter * let w:created=1
+autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1) | endif
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 	User
+" => User
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype on
 filetype plugin on
 filetype indent on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	Tab settings
+" => Tab settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ts=4
 set tabstop=4 
 set shiftwidth=4 
-"set expandtab
+set expandtab
 set cindent 
 set smartindent
 set autoindent
 set hlsearch
 
-"   Language specfic tab settings
+" Language specfic tab settings
 autocmd FileType python 		set softtabstop=4 shiftwidth=4 expandtab 
 autocmd FileType html 			set softtabstop=2 shiftwidth=2 expandtab 
 autocmd FileType css 			set softtabstop=2 shiftwidth=2 expandtab 
@@ -66,7 +85,7 @@ autocmd FileType javascript 	set softtabstop=2 shiftwidth=2 expandtab
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 	Mappings
+" => Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>tl :TlistToggle<CR>
 map <leader>n :NERDTreeToggle<CR> 
@@ -76,27 +95,16 @@ map <leader>m :MRU<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	Backups (.swp)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set dir=~/.vimbackup
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 	Word Wrap
+" => Word Wrap
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set formatoptions=l
 set lbr
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 	Spell Check
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType tex setlocal spell spelllang=en_us
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 	History
+" => Spell Check
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set history=1000
-set undolevels=1000
+autocmd FileType tex setlocal spell spelllang=en_us
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -111,15 +119,10 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType java set omnifunc=javacomplete#Complete
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	Key Mappings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <F10> :TlistToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	Compiler Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 autocmd FileType c map <F5> :call CompileRunGcc()<CR>
 autocmd FileType c map <F6> :call DebugGcc()<CR>
 autocmd FileType cpp map <F5> :call CompileRunGpp()<CR>
@@ -212,14 +215,15 @@ func! PyInteractive()
 	exec "!python -i %"
 endfunc
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 	Print options
+" => Print options
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set tw=86
 set printoptions=syntax:n,number:n,header:0,paper:letter,formfeed:y
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 	vim-latexsuite
+" => vim-latexsuite
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set grepprg=grep\ -nH\ $*
 "let g:tex_flavor='latex'
@@ -235,46 +239,69 @@ let g:Tex_CompileRule_dvi='latex --src-specials -interaction=nonstopmode $*'
 "let g:Tex_ViewRuleComplete_dvi = 'xdvi -editor "vim --servername xdiv --remote +\%l \%f" $* &'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	Changes comment color
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-highlight Comment ctermfg=blue
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	Pydiction
+" => Pydiction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:pydiction_location = '~/.vim/ftplugin/pydiction/complete-dict'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	PyFlakes	
+" => PyFlakes	
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 highlight clear SpellBad
 highlight SpellBad ctermbg=red ctermfg=white
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	Highlight lines over line length in light blue
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-highlight LineOverflow ctermbg=blue ctermfg=white guibg=#592929
-let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
-autocmd VimEnter * autocmd WinEnter * let w:created=1
-autocmd VimEnter * let w:created=1
-autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1) | endif
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	CommandT
+" => Command T
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let CommandTMaxFiles = 20000
 nnoremap <silent> <Leader>t :CommandT<CR>
 nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	Fugitive
+" => Fugitive
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufReadPost fugitive://* set bufhidden=delete
 "set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	Powerline
+" => Powerline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:Powerline_symbols = 'compatible'
 set encoding=utf8
 set laststatus=2
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vundle
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+"   Bundle 'tpope/vim-fugitive'
+"   Bundle 'Lokaltog/vim-easymotion'
+"   Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+"   Bundle 'tpope/vim-rails.git'
+
+" vim-scripts repos
+"   Bundle 'L9'
+"   Bundle 'FuzzyFinder'
+
+" non github repos
+"   Bundle 'git://git.wincent.com/command-t.git'
+
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
