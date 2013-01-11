@@ -12,7 +12,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 " automomatically cd into the directory that the file is in
-set autochdir 
+"set autochdir 
 
 " ignore these files while expanding wild chars
 set wildignore=*.o,*.class,*.pyc
@@ -292,6 +292,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-pathogen'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-rake'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'vim-scripts/mru.vim'
