@@ -1,6 +1,10 @@
 default: install
 
-install: symlink update xmledit
+install: symlink update vundle xmledit
+
+vundle: 
+	 git clone https://github.com/gmarik/vundle.git bundle/vundle
+	 vim +BundleInstall +qall
 
 symlink:
 	ln -s $(HOME)/.vim/vimrc $(HOME)/.vimrc

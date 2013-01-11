@@ -269,3 +269,38 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 let g:Powerline_symbols = 'compatible'
 set encoding=utf8
 set laststatus=2
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vundle
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'jcf/vim-latex'
+Bundle 'sukima/xmledit'
+Bundle 'wincent/Command-T'
+Bundle 'scrooloose/nerdtree'
+Bundle 'vim-scripts/javacomplete'
+Bundle 'vim-scripts/pythoncomplete'
+Bundle 'pangloss/vim-javascript'
+Bundle 'scrooloose/syntastic'
+Bundle 'Rip-Rip/clang_complete'
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'godlygeek/tabular'
+Bundle 'tpope/vim-pathogen'
+Bundle 'tpope/vim-surround'
+Bundle 'ervandew/supertab'
+Bundle 'vim-scripts/bufexplorer.zip'
+Bundle 'vim-scripts/mru.vim'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'msanders/snipmate.vim'
+Bundle 'tpope/vim-rails'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-haml'
+Bundle 'groenewege/vim-less'
+Bundle 'tpope/vim-endwise'
+Bundle 'scrooloose/nerdcommenter'
