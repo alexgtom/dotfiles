@@ -82,6 +82,7 @@ autocmd FileType html 			set softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType css 			set softtabstop=2 shiftwidth=2 expandtab 
 autocmd FileType ejs 			set softtabstop=2 shiftwidth=2 expandtab 
 autocmd FileType javascript 	set softtabstop=2 shiftwidth=2 expandtab 
+autocmd FileType ruby           set softtabstop=2 shiftwidth=2 expandtab 
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
