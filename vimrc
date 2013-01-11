@@ -297,10 +297,16 @@ Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'vim-scripts/mru.vim'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'Raimondi/delimitMate'
-Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-haml'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-endwise'
 Bundle 'scrooloose/nerdcommenter'
+
+" snipmate dependcies
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "honza/snipmate-snippets"
+
+Bundle "garbas/vim-snipmate"
