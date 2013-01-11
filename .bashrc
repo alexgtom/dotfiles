@@ -7,13 +7,7 @@ export EDITOR=vi
 
 export ANDROIDSDK=~/adt-bundle-mac-x86_64/sdk
 
-export PATH=$ANDROIDSDK/platform-tools:$PATH
-export PATH=$ANDROIDSDK/tools:$PATH
-export PATH=$PATH:/usr/local/texlive/2012/bin/universal-darwin
-export PATH=/usr/local/bin:$PATH
-export PATH=~/bin:$PATH
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # show git branch in terminal prompt
 parse_git_branch() {
@@ -36,3 +30,10 @@ done
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export PATH=$PATH:$ANDROIDSDK/platform-tools
+export PATH=$PATH:$ANDROIDSDK/tools
+export PATH=$PATH:/usr/local/texlive/2012/bin/universal-darwin
+export PATH=/usr/local/bin:$PATH
+export PATH=~/bin:$PATH
