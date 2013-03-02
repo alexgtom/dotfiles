@@ -2,6 +2,8 @@ alias ls='ls -G'
 alias ll='ls -l'
 alias la='ls -a'
 alias lf='ls -f'
+alias 162='cd ~/Documents/CS162'
+alias 170='cd ~/Documents/CS170'
 
 export EDITOR=vi
 
@@ -35,5 +37,10 @@ fi
 export PATH=$PATH:$ANDROIDSDK/platform-tools
 export PATH=$PATH:$ANDROIDSDK/tools
 export PATH=$PATH:/usr/local/texlive/2012/bin/universal-darwin
+export PATH=$PATH:/usr/local/Cellar/ruby/1.9.3-p362
 export PATH=/usr/local/bin:$PATH
+export PATH=~/Documents/CS162/nachos/bin:$PATH
 export PATH=~/bin:$PATH
+
+# For java
+export CLASSPATH=~/Documents/CS162/nachos/unittest/lib/*:.:nachos:~/Documents/CS162/nachos/unittest
