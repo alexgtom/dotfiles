@@ -32,9 +32,19 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git osx)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/Users/alexgtom/bin:/Users/alexgtom/Documents/CS162/nachos/bin:/usr/local/bin:/Users/alexgtom/.rvm/gems/ruby-1.9.3-p362/bin:/Users/alexgtom/.rvm/gems/ruby-1.9.3-p362@global/bin:/Users/alexgtom/.rvm/rubies/ruby-1.9.3-p362/bin:/Users/alexgtom/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin:/Users/alexgtom/adt-bundle-mac-x86_64/sdk/platform-tools:/Users/alexgtom/adt-bundle-mac-x86_64/sdk/tools:/usr/local/texlive/2012/bin/universal-darwin:/usr/local/Cellar/ruby/1.9.3-p362
+
+
+alias 162='cd ~/Documents/CS162'
+alias os='cd ~/Documents/CS162/nachos'
+alias 170='cd ~/Documents/CS170'
+
+export EDITOR=vi
+
+export ANDROIDSDK=~/adt-bundle-mac-x86_64/sdk
+
