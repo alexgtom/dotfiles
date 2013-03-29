@@ -43,6 +43,9 @@ export PATH=/Users/alexgtom/bin:/Users/alexgtom/Documents/CS162/nachos/bin:/usr/
 alias 162='cd ~/Documents/CS162'
 alias os='cd ~/Documents/CS162/nachos'
 alias 170='cd ~/Documents/CS170'
+alias vimrc='vi ~/.vimrc'
+alias zshrc='vi ~/.zshrc'
+alias dotfiles='cd ~/dotfiles'
 
 export EDITOR=vi
 

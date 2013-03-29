@@ -2,11 +2,13 @@ VIMHOME=~/.vim
 
 default: install
 
-install: symlink packages
+install: symlink packages ohmyzsh
 
 packages:
 	brew install git bash-completion
 
+ohmyzsh:
+	curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 # creates symbolic links in ~ to all the dotfile (and directories) in this 
 # directory
 symlink:
