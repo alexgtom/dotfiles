@@ -3,6 +3,7 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lf='ls -f'
 alias 162='cd ~/Documents/CS162'
+alias os='cd ~/Documents/CS162/nachos'
 alias 170='cd ~/Documents/CS170'
 
 export EDITOR=vi
@@ -43,4 +44,4 @@ export PATH=~/Documents/CS162/nachos/bin:$PATH
 export PATH=~/bin:$PATH
 
 # For java
-export CLASSPATH=~/Documents/CS162/nachos/unittest/lib/*:.:nachos:~/Documents/CS162/nachos/unittest
+export CLASSPATH=~/Documents/CS162/nachos/unittest/lib/*:.:nachos:~/Documents/CS162/nachos/unittest:~/Documents/CS162/proj3
