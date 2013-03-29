@@ -71,6 +71,7 @@ set ts=4
 set tabstop=4 
 set shiftwidth=4 
 set expandtab
+set smarttab
 set cindent 
 set smartindent
 set autoindent
@@ -116,9 +117,9 @@ autocmd FileType ejs,html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType java set omnifunc=javacomplete#Complete
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType c setlocal omnifunc=ccomplete#Complete
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -271,6 +272,12 @@ set encoding=utf8
 set laststatus=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => SuperTab
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+let g:SuperTabDefaultCompletionType = "context"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/bundle/vundle/
@@ -304,6 +311,7 @@ Bundle 'tpope/vim-haml'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-endwise'
 Bundle 'scrooloose/nerdcommenter'
+"Bundle 'Shougo/neocomplcache'
 
 " snipmate dependcies
 Bundle "MarcWeber/vim-addon-mw-utils"

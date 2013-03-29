@@ -15,5 +15,10 @@ xmledit:
 	ln -s ../bundle/xmledit/ftplugin/xml.vim xhtml.vim  ; \
 	ln -s ../bundle/xmledit/ftplugin/xml.vim ejs.vim ;
 
+commandt:
+	cd bundle/Command-T/ruby/command-t ; \
+	ruby extconf.rb ; \
+	make ; 
+
 update: 
 	git submodule update --init
