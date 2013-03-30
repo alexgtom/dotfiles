@@ -254,9 +254,9 @@ highlight SpellBad ctermbg=red ctermfg=white
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Command T
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let CommandTMaxFiles = 20000
-nnoremap <silent> <Leader>t :CommandT<CR>
-nnoremap <silent> <Leader>b :CommandTBuffer<CR>
+"let CommandTMaxFiles = 20000
+"nnoremap <silent> <Leader>t :CommandT<CR>
+"nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fugitive
@@ -287,7 +287,8 @@ Bundle 'gmarik/vundle'
 
 Bundle 'jcf/vim-latex'
 Bundle 'sukima/xmledit'
-Bundle 'wincent/Command-T'
+"Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/javacomplete'
 Bundle 'vim-scripts/pythoncomplete'
