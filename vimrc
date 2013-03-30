@@ -89,11 +89,11 @@ autocmd FileType ruby           set softtabstop=2 shiftwidth=2 expandtab
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>tl :TlistToggle<CR>
 map <leader>n :NERDTreeToggle<CR> 
 set pastetoggle=<F3>
 map <leader>o :BufExplorer<cr>
 map <leader>m :MRU<CR>
+nmap <leader>tb :TagbarToggle<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -278,6 +278,44 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabDefaultCompletionType = "context"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => neocomlcache 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_enable_smart_case = 1
+
+" default # of completions is 100, that's crazy
+let g:neocomplcache_max_list = 5
+
+" words less than 3 letters long aren't worth completing
+let g:neocomplcache_auto_completion_start_length = 3
+
+" Map standard Ctrl-N completion to Cmd-Space
+inoremap <D-Space> <C-n>
+
+" This makes sure we use neocomplcache completefunc instead of 
+" the one in rails.vim, otherwise this plugin will crap out
+let g:neocomplcache_force_overwrite_completefunc = 1
+
+" Define keyword.
+if !exists('g:neocomplcache_keyword_patterns')
+  let g:neocomplcache_keyword_patterns = {}
+endif
+let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+
+
+" Enable heavy omni completion, which require computational power and may stall the vim. 
+if !exists('g:neocomplcache_omni_patterns')
+  let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
+let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+let g:neocomplcache_omni_patterns.java = '\%(\h\w*\|)\)\.'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/bundle/vundle/
@@ -304,7 +342,7 @@ Bundle 'tpope/vim-rake'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'vim-scripts/mru.vim'
-Bundle 'vim-scripts/taglist.vim'
+"Bundle 'vim-scripts/taglist.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
@@ -312,7 +350,9 @@ Bundle 'tpope/vim-haml'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-endwise'
 Bundle 'scrooloose/nerdcommenter'
-"Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neocomplcache'
+Bundle 'majutsushi/tagbar'
+"Bundle 'vim-scripts/AutoComplPop'
 
 " snipmate dependcies
 Bundle "MarcWeber/vim-addon-mw-utils"
