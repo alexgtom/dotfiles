@@ -352,6 +352,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'myusuf3/numbers.vim'
+Bundle 'terryma/vim-multiple-cursors'
 
 " snipmate dependcies
 Bundle 'MarcWeber/vim-addon-mw-utils'
