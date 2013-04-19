@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="clean"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -41,11 +41,15 @@ export PATH=/Users/alexgtom/bin:/Users/alexgtom/Documents/CS162/nachos/bin:/usr/
 
 
 alias 162='cd ~/Documents/CS162'
-alias os='cd ~/Documents/CS162/nachos'
+alias os='cd ~/Documents/CS162/proj3'
 alias 170='cd ~/Documents/CS170'
 alias vimrc='vi ~/.vimrc'
 alias zshrc='vi ~/.zshrc'
 alias dotfiles='cd ~/dotfiles'
+alias vimfiles='cd ~/.vim'
+
+# For java
+export CLASSPATH=.:nachos:~/Documents/CS162/nachos/unittest:~/Documents/CS162/proj3:"/Users/alexgtom/Documents/CS162/proj3/src/edu/berkeley/cs162/unittest/lib/*"
 
 export EDITOR=vi
 
