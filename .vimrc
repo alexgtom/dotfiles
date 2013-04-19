@@ -314,7 +314,7 @@ let g:neocomplcache_omni_patterns.java = '\%(\h\w*\|)\)\.'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
