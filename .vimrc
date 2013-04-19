@@ -7,9 +7,6 @@ let mapleader=","
 " backspace fix
 set bs=2
 
-" pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
 
 " automomatically cd into the directory that the file is in
 "set autochdir 
