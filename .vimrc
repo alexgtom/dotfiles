@@ -37,8 +37,7 @@ let g:molokai_original=0
 "colorscheme solarized
 "let g:solarized_termcolors=256
 
-" override comment color
-"highlight Comment ctermfg=blue
+highlight LineNr term=underline ctermfg=DarkGrey ctermbg=234 guifg=#BCBCBC guibg=#232526
 
 " override Search color
 highlight Search ctermfg=black ctermbg=yellow
@@ -47,7 +46,7 @@ highlight Search ctermfg=black ctermbg=yellow
 set dir=~/.vimbackup
 
 " Highlight lines over line length in light blue
-highlight LineOverflow ctermbg=blue ctermfg=white guibg=#592929
+highlight LineOverflow cterm=underline 
 let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
 autocmd VimEnter * autocmd WinEnter * let w:created=1
 autocmd VimEnter * let w:created=1
