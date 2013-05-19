@@ -351,7 +351,7 @@ Bundle 'majutsushi/tagbar'
 "Bundle 'vim-scripts/AutoComplPop'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'myusuf3/numbers.vim'
+"Bundle 'myusuf3/numbers.vim'
 Bundle 'terryma/vim-multiple-cursors'
 
 " snipmate dependcies
