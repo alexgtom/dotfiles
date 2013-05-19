@@ -1,1 +1,4 @@
 .vimbackup/*
+.ssh/config
+.ssh/id_rsa
+.ssh/known_hosts
