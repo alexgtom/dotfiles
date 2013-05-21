@@ -37,19 +37,16 @@ plugins=(git osx)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/alexgtom/bin:/Users/alexgtom/Documents/CS162/nachos/bin:/usr/local/bin:/Users/alexgtom/.rvm/gems/ruby-1.9.3-p362/bin:/Users/alexgtom/.rvm/gems/ruby-1.9.3-p362@global/bin:/Users/alexgtom/.rvm/rubies/ruby-1.9.3-p362/bin:/Users/alexgtom/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin:/Users/alexgtom/adt-bundle-mac-x86_64/sdk/platform-tools:/Users/alexgtom/adt-bundle-mac-x86_64/sdk/tools:/usr/local/texlive/2012/bin/universal-darwin:/usr/local/Cellar/ruby/1.9.3-p362
+export PATH=/Users/alexgtom/bin
+export PATH=PATH:/usr/local/bin
+export PATH=PATH:/usr/bin
+export PATH=PATH:/bin
+export PATH=PATH:/usr/sbin:/sbin:/usr/local/bin
 
-
-alias 162='cd ~/Documents/CS162'
-alias os='cd ~/Documents/CS162/proj3'
-alias 170='cd ~/Documents/CS170'
 alias vimrc='vi ~/.vimrc'
 alias zshrc='vi ~/.zshrc'
 alias dotfiles='cd ~/dotfiles'
 alias vimfiles='cd ~/.vim'
-
-# For java
-export CLASSPATH=.:nachos:~/Documents/CS162/nachos/unittest:~/Documents/CS162/proj3:"/Users/alexgtom/Documents/CS162/proj3/src/edu/berkeley/cs162/unittest/lib/*"
 
 export EDITOR=vi
 
