@@ -38,10 +38,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/Users/alexgtom/bin
-export PATH=PATH:/usr/local/bin
-export PATH=PATH:/usr/bin
-export PATH=PATH:/bin
-export PATH=PATH:/usr/sbin:/sbin:/usr/local/bin
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/bin
+export PATH=$PATH:/bin
+export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin
 
 alias vimrc='vi ~/.vimrc'
 alias zshrc='vi ~/.zshrc'
