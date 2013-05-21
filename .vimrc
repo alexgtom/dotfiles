@@ -213,7 +213,6 @@ func! PyInteractive()
 	exec "!python -i %"
 endfunc
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Print options
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -311,6 +310,13 @@ let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.java = '\%(\h\w*\|)\)\.'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Syntastic
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_auto_loc_list = 1
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -353,6 +359,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'Valloric/YouCompleteMe'
 "Bundle 'myusuf3/numbers.vim'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'nvie/vim-flake8'
 
 " snipmate dependcies
 Bundle 'MarcWeber/vim-addon-mw-utils'

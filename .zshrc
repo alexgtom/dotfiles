@@ -42,6 +42,10 @@ export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/bin
 export PATH=$PATH:/bin
 export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin
+export PATH=$PATH:/usr/local/share/python
+
+export WORKON_HOME="~/.virtualenvs"
+[ -r "$(which virtualenvwrapper_lazy.sh)" ] && source "$(which virtualenvwrapper_lazy.sh)"
 
 alias vimrc='vi ~/.vimrc'
 alias zshrc='vi ~/.zshrc'
