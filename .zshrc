@@ -56,3 +56,5 @@ export EDITOR=vi
 
 export ANDROIDSDK=~/adt-bundle-mac-x86_64/sdk
 
+# for work
+workon bats
