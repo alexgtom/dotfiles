@@ -76,6 +76,7 @@ set hlsearch
 " Language specfic tab settings
 autocmd FileType python 		set softtabstop=4 shiftwidth=4 expandtab 
 autocmd FileType html 			set softtabstop=2 shiftwidth=2 expandtab 
+autocmd FileType htmldjango 	set softtabstop=2 shiftwidth=2 expandtab 
 autocmd FileType css 			set softtabstop=2 shiftwidth=2 expandtab 
 autocmd FileType ejs 			set softtabstop=2 shiftwidth=2 expandtab 
 autocmd FileType javascript 	set softtabstop=2 shiftwidth=2 expandtab 
@@ -332,7 +333,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/javacomplete'
 Bundle 'vim-scripts/pythoncomplete'
-Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
 "Bundle 'Rip-Rip/clang_complete'
 Bundle 'tpope/vim-fugitive'

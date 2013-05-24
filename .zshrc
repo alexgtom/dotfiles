@@ -43,6 +43,7 @@ export PATH=$PATH:/usr/bin
 export PATH=$PATH:/bin
 export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin
 export PATH=$PATH:/usr/local/share/python
+export PATH=$PATH:/usr/local/share/npm/bin
 
 export WORKON_HOME="~/.virtualenvs"
 [ -r "$(which virtualenvwrapper_lazy.sh)" ] && source "$(which virtualenvwrapper_lazy.sh)"
@@ -51,6 +52,8 @@ alias vimrc='vi ~/.vimrc'
 alias zshrc='vi ~/.zshrc'
 alias dotfiles='cd ~/dotfiles'
 alias vimfiles='cd ~/.vim'
+alias bats='cd ~/bats-api'
+alias triage='cd ~/bats-api/batstriage'
 
 export EDITOR=vi
 
