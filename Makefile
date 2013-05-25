@@ -2,31 +2,19 @@ VIMHOME=~/.vim
 
 default: install
 
-install: symlink packages ohmyzsh
-
-packages:
-	brew install git bash-completion
+install: symlink ohmyzsh
 
 ohmyzsh:
 	curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-# creates symbolic links in ~ to all the dotfile (and directories) in this 
-# directory
-symlink:
-	find . -maxdepth 1 -name ".*" \
-		-not -name ".git" \
-		-not -name ".gitmodules" \
-		-not -name ".gitignore" \
-		-not -name "." \
-		-not -name ".." \
-		-print0 | \
-		xargs -o -0 -I {} bash -c \
-			'if [ ! -L ~/{} ] ; then ln -sv `pwd`/{} ~/{} ; fi'
 
-# clean target is commented out because it is unsafe but left here for reference
-#clean:
-#	find . -maxdepth 1 -name ".*" \
-#		-not -name ".git" \ 
-#		-not -name "." \
-#		-not -name ".." \
-#		-print0 | \
-#		xargs -o -0 -I {} rm -rf ~/{}
+symlink:
+	cd ~ ; \
+	ln -si {dotfiles/,}.bash_profile ; \
+	ln -si {dotfiles/,}.bashrc ; \
+	ln -si {dotfiles/,}.cvsignore ; \
+	ln -si {dotfiles/,}.ssh ; \
+	ln -si {dotfiles/,}.vim ; \
+	ln -si {dotfiles/,}.vimbackup ; \
+	ln -si {dotfiles/,}.vimrc ; \
+	ln -si {dotfiles/,}.zshrc ; \
+	cd -
