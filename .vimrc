@@ -266,6 +266,8 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 let g:Powerline_symbols = 'compatible'
 set encoding=utf8
 set laststatus=2
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+set noshowmode
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => SuperTab
@@ -319,7 +321,7 @@ let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_auto_loc_list = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vundle
+" => vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/vundle/
 call vundle#rc()
@@ -336,7 +338,7 @@ Bundle 'vim-scripts/pythoncomplete'
 Bundle 'scrooloose/syntastic'
 "Bundle 'Rip-Rip/clang_complete'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'Lokaltog/powerline'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-pathogen'
 Bundle 'tpope/vim-surround'
