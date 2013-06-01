@@ -362,6 +362,7 @@ Bundle 'Valloric/YouCompleteMe'
 "Bundle 'myusuf3/numbers.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'nvie/vim-flake8'
+Bundle 'mileszs/ack.vim'
 
 " snipmate dependcies
 Bundle 'MarcWeber/vim-addon-mw-utils'
