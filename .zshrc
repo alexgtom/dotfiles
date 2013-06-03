@@ -54,6 +54,9 @@ alias dotfiles='cd ~/dotfiles'
 alias vimfiles='cd ~/.vim'
 alias bats='cd ~/bats-api'
 alias triage='cd ~/bats-api/batstriage'
+alias btl='cd ~/bats-api/batstriage/static/batstriage/js/batstriagelib'
+
+export BATS=~/bats-api
 
 export EDITOR=vi
 
