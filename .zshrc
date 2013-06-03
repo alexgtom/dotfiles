@@ -44,6 +44,7 @@ export PATH=$PATH:/bin
 export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin
 export PATH=$PATH:/usr/local/share/python
 export PATH=$PATH:/usr/local/share/npm/bin
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export WORKON_HOME="~/.virtualenvs"
 [ -r "$(which virtualenvwrapper_lazy.sh)" ] && source "$(which virtualenvwrapper_lazy.sh)"
@@ -61,3 +62,6 @@ export ANDROIDSDK=~/adt-bundle-mac-x86_64/sdk
 
 # for work
 workon bats
+
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"

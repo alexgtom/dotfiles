@@ -9,7 +9,7 @@ set bs=2
 
 
 " automomatically cd into the directory that the file is in
-"set autochdir 
+"set autochdir
 
 " ignore these files while expanding wild chars
 set wildignore=*.o,*.class,*.pyc
@@ -26,6 +26,9 @@ set ruler
 
 " syntax
 syntax on
+
+" strip trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Color Scheme
@@ -46,7 +49,7 @@ highlight Search ctermfg=black ctermbg=yellow
 set dir=~/.vimbackup
 
 " Highlight lines over line length in light blue
-highlight LineOverflow cterm=underline 
+highlight LineOverflow cterm=underline
 let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
 autocmd VimEnter * autocmd WinEnter * let w:created=1
 autocmd VimEnter * let w:created=1
@@ -64,29 +67,29 @@ filetype indent on
 " => Tab settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ts=4
-set tabstop=4 
-set shiftwidth=4 
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set smarttab
-set cindent 
+set cindent
 set smartindent
 set autoindent
 set hlsearch
 
 " Language specfic tab settings
-autocmd FileType python 		set softtabstop=4 shiftwidth=4 expandtab 
-autocmd FileType html 			set softtabstop=2 shiftwidth=2 expandtab 
-autocmd FileType htmldjango 	set softtabstop=2 shiftwidth=2 expandtab 
-autocmd FileType css 			set softtabstop=2 shiftwidth=2 expandtab 
-autocmd FileType ejs 			set softtabstop=2 shiftwidth=2 expandtab 
-autocmd FileType javascript 	set softtabstop=2 shiftwidth=2 expandtab 
-autocmd FileType ruby           set softtabstop=2 shiftwidth=2 expandtab 
+autocmd FileType python 		set softtabstop=4 shiftwidth=4 expandtab
+autocmd FileType html 			set softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType htmldjango 	set softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType css 			set softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType ejs 			set softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType javascript 	set softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType ruby           set softtabstop=2 shiftwidth=2 expandtab
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>n :NERDTreeToggle<CR> 
+map <leader>n :NERDTreeToggle<CR>
 set pastetoggle=<F3>
 map <leader>o :BufExplorer<cr>
 map <leader>m :MRU<CR>
@@ -107,7 +110,7 @@ autocmd FileType tex setlocal spell spelllang=en_us
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	Omni Completition	
+"	Omni Completition
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable omni completion. (Ctrl-X Ctrl-O)
 autocmd FileType ejs,html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -181,7 +184,7 @@ func! CompileViewLatex()
 endfunc
 
 func! ViewLatex()
-	exec '!xdvi -editor "vim --servername 'v:servername' --remote-wait +\%l \%f" -sourceposition ' . line(".") . substitute(expand('%:p'),expand(Tex_GetMainFileName(':p:h')).'\/','','') . " " . expand(Tex_GetMainFileName(':p:r')) . ".dvi &" 
+	exec '!xdvi -editor "vim --servername 'v:servername' --remote-wait +\%l \%f" -sourceposition ' . line(".") . substitute(expand('%:p'),expand(Tex_GetMainFileName(':p:h')).'\/','','') . " " . expand(Tex_GetMainFileName(':p:r')) . ".dvi &"
 endfunc
 
 func! CompilePdfLatex()
@@ -242,7 +245,7 @@ let g:Tex_CompileRule_dvi='latex --src-specials -interaction=nonstopmode $*'
 let g:pydiction_location = '~/.vim/ftplugin/pydiction/complete-dict'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => PyFlakes	
+" => PyFlakes
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 highlight clear SpellBad
 highlight SpellBad ctermbg=red ctermfg=white
@@ -276,7 +279,7 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabDefaultCompletionType = "context"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => neocomlcache 
+" => neocomlcache
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_camel_case_completion = 1
@@ -292,7 +295,7 @@ let g:neocomplcache_auto_completion_start_length = 3
 " Map standard Ctrl-N completion to Cmd-Space
 inoremap <D-Space> <C-n>
 
-" This makes sure we use neocomplcache completefunc instead of 
+" This makes sure we use neocomplcache completefunc instead of
 " the one in rails.vim, otherwise this plugin will crap out
 let g:neocomplcache_force_overwrite_completefunc = 1
 
@@ -303,7 +306,7 @@ endif
 let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
 
-" Enable heavy omni completion, which require computational power and may stall the vim. 
+" Enable heavy omni completion, which require computational power and may stall the vim.
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
