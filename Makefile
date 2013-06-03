@@ -18,4 +18,5 @@ symlink:
 	ln -si {dotfiles/,}.vimrc ; \
 	ln -si {dotfiles/,}.zshrc ; \
 	ln -si {dotfiles/,}.octaverc ; \
+	ln -si {dotfiles/,}.gitconfig ; \
 	cd -

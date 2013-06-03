@@ -1,0 +1,12 @@
+[user]
+	name = alexgtom
+	email = alexgtom@gmail.com
+[core]
+	excludefiles = /Users/alexgtom/dotfiles/.cvsignore
+	excludesfile = ~/.cvsignore
+[push]
+	default = simple
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[color]
+	ui = true

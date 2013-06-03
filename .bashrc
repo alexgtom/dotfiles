@@ -45,3 +45,5 @@ export PATH=~/bin:$PATH
 
 # For java
 export CLASSPATH=~/Documents/CS162/nachos/unittest/lib/*:.:nachos:~/Documents/CS162/nachos/unittest:~/Documents/CS162/proj3
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
