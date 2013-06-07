@@ -324,6 +324,11 @@ let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_auto_loc_list = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => indent guides
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+hi IndentGuidesEven ctermbg=234
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/vundle/
@@ -366,6 +371,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'nvie/vim-flake8'
 Bundle 'mileszs/ack.vim'
+Bundle 'nathanaelkane/vim-indent-guides'
 
 " snipmate dependcies
 Bundle 'MarcWeber/vim-addon-mw-utils'
