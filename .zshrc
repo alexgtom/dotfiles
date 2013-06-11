@@ -68,3 +68,6 @@ workon bats
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# home brew
+export HOMEBREW_TEMP=~/Developer/Cellar
