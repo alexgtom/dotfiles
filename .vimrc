@@ -92,7 +92,7 @@ autocmd FileType ruby           set softtabstop=2 shiftwidth=2 expandtab
 map <leader>n :NERDTreeToggle<CR>
 set pastetoggle=<F3>
 map <leader>o :BufExplorer<cr>
-map <leader>m :MRU<CR>
+map <leader>m :CtrlPMRU<CR>
 nmap <leader>tb :TagbarToggle<CR>
 
 
@@ -329,6 +329,17 @@ let g:syntastic_auto_loc_list = 1
 hi IndentGuidesEven ctermbg=234
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => python mode
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:pymode_lint = 0
+let g:pymode_run_key = 'R'
+let g:pymode_folding = 0
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ctrlp
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/vundle/
@@ -353,7 +364,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-rake'
 "Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/bufexplorer.zip'
-Bundle 'vim-scripts/mru.vim'
 "Bundle 'vim-scripts/taglist.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'tpope/vim-rails'
@@ -372,6 +382,8 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'nvie/vim-flake8'
 Bundle 'mileszs/ack.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'klen/python-mode'
+Bundle 'pangloss/vim-javascript'
 
 " snipmate dependcies
 Bundle 'MarcWeber/vim-addon-mw-utils'
