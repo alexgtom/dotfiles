@@ -320,7 +320,7 @@ let g:neocomplcache_omni_patterns.java = '\%(\h\w*\|)\)\.'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_checkers = ['pyflakes']
 let g:syntastic_auto_loc_list = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
