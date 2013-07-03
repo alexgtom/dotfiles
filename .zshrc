@@ -37,13 +37,14 @@ plugins=(git osx)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/alexgtom/bin
+export PATH=~/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/bin
 export PATH=$PATH:/bin
 export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin
 export PATH=$PATH:/usr/local/share/python
 export PATH=$PATH:/usr/local/share/npm/bin
+export PATH=$PATH:~/adt-bundle-mac-x86_64/sdk/platform-tools
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export WORKON_HOME="~/.virtualenvs"
@@ -69,5 +70,5 @@ workon bats
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-# home brew
-export HOMEBREW_TEMP=~/Developer/Cellar
+
+source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

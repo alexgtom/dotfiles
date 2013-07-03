@@ -269,7 +269,7 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 let g:Powerline_symbols = 'compatible'
 set encoding=utf8
 set laststatus=2
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+"set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set noshowmode
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -336,8 +336,10 @@ let g:pymode_run_key = 'R'
 let g:pymode_folding = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => ctrlp
+" => airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vundle
@@ -357,7 +359,7 @@ Bundle 'vim-scripts/pythoncomplete'
 Bundle 'scrooloose/syntastic'
 "Bundle 'Rip-Rip/clang_complete'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/powerline'
+"Bundle 'Lokaltog/powerline'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-pathogen'
 Bundle 'tpope/vim-surround'
@@ -385,6 +387,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 "Bundle 'klen/python-mode'
 Bundle 'pangloss/vim-javascript'
 Bundle 'Townk/vim-autoclose'
+Bundle 'bling/vim-airline'
 
 " snipmate dependcies
 "Bundle 'MarcWeber/vim-addon-mw-utils'
