@@ -42,10 +42,11 @@ export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/bin
 export PATH=$PATH:/bin
 export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin
-export PATH=$PATH:/usr/local/share/python
 export PATH=$PATH:/usr/local/share/npm/bin
 export PATH=$PATH:~/adt-bundle-mac-x86_64/sdk/platform-tools
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.gem/bin # Add RVM to PATH for scripting
+export PATH=$PATH:/usr/local/share/python
 
 export WORKON_HOME="~/.virtualenvs"
 [ -r "$(which virtualenvwrapper_lazy.sh)" ] && source "$(which virtualenvwrapper_lazy.sh)"
@@ -57,6 +58,7 @@ alias vimfiles='cd ~/.vim'
 alias bats='cd ~/bats-api'
 alias triage='cd ~/bats-api/batstriage'
 alias btl='cd ~/bats-api/batstriage/static/batstriage/js/batstriagelib'
+alias vi=vim
 
 export BATS=~/bats-api
 
@@ -72,3 +74,6 @@ workon bats
 
 
 source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export GEM_HOME=~/.gem
+export GEM_PATH=~/.gem
