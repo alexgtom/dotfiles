@@ -135,6 +135,7 @@ autocmd FileType tex map <F6> :call CompileViewLatex()<CR>
 autocmd FileType tex map <F8> :call CompilePdfLatex()<CR>
 autocmd FileType python map <F5> :call CompileRunPy()<CR>
 autocmd FileType lg map <F5> :call CompileRunLg()<CR>
+autocmd FileType javascript map <F5> :call CompileRunJs()<CR>
 autocmd FileType ruby map <F5> :call CompileRunRb()<CR>
 autocmd FileType python map <F6> :call PyDoctest()<CR>
 autocmd FileType python map <F4> :call PyInteractive()<CR>
@@ -169,6 +170,11 @@ func! DebugGpp()
     exec "!g++ % -o %< -w -g"
     exec "!valgrind --tool=memcheck --leak-check=yes %<"
 	exec "! ./%<"
+endfunc
+
+func! CompileRunJs()
+    exec "w"
+    exec "!node %"
 endfunc
 
 func! CompileRunJava()
@@ -320,7 +326,9 @@ let g:neocomplcache_omni_patterns.java = '\%(\h\w*\|)\)\.'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:syntastic_python_checkers = ['pep8', 'pyflakes']
 let g:syntastic_python_checkers = ['pyflakes']
+let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_auto_loc_list = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -382,12 +390,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'nvie/vim-flake8'
 Bundle 'mileszs/ack.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'klen/python-mode'
+"Bundle 'klen/python-mode'
 Bundle 'pangloss/vim-javascript'
-
-" snipmate dependcies
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-"Bundle 'honza/snipmate-snippets'
-
-Bundle 'garbas/vim-snipmate'
+Bundle 'hynek/vim-python-pep8-indent'
+Bundle 'juvenn/mustache.vim'

@@ -37,14 +37,15 @@ plugins=(git osx)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/alexgtom/bin
+export PATH=$HOME/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/bin
 export PATH=$PATH:/bin
 export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin
-export PATH=$PATH:/usr/local/share/python
 export PATH=$PATH:/usr/local/share/npm/bin
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.gem/bin # Add RVM to PATH for scripting
+export PATH=$PATH:/usr/local/share/python
 
 export WORKON_HOME="~/.virtualenvs"
 [ -r "$(which virtualenvwrapper_lazy.sh)" ] && source "$(which virtualenvwrapper_lazy.sh)"
@@ -56,6 +57,7 @@ alias vimfiles='cd ~/.vim'
 alias bats='cd ~/bats-api'
 alias triage='cd ~/bats-api/batstriage'
 alias btl='cd ~/bats-api/batstriage/static/batstriage/js/batstriagelib'
+alias vi=vim
 
 export BATS=~/bats-api
 
@@ -68,6 +70,5 @@ workon bats
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-# home brew
-export HOMEBREW_TEMP=~/Developer/Cellar
+export GEM_HOME=~/.gem
+export GEM_PATH=~/.gem
