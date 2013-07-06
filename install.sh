@@ -10,9 +10,10 @@ ln -si {dotfiles/,}.bashrc ; \
 ln -si {dotfiles/,}.cvsignore ; \
 ln -si {dotfiles/,}.ssh ; \
 ln -si {dotfiles/,}.vim ; \
-ln -si {dotfiles/,}.vimbackup ; \
 ln -si {dotfiles/,}.vimrc ; \
 ln -si {dotfiles/,}.zshrc ; \
 ln -si {dotfiles/,}.octaverc ; \
 ln -si {dotfiles/,}.gitconfig ; \
 cd -
+
+mkdir -p ~/.vimbackup
