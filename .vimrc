@@ -1,12 +1,16 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype on
+filetype plugin on
+filetype indent on
+syntax on
+
 " change the mapleader from \ to ,
 let mapleader=","
 
 " backspace fix
 set bs=2
-
 
 " automomatically cd into the directory that the file is in
 "set autochdir
@@ -24,9 +28,6 @@ set nocompatible
 " bottom ruler
 set ruler
 
-" syntax
-syntax on
-
 " strip trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -34,34 +35,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 set noswapfile
 set nobackup
 set nowb
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Color Scheme
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let &t_Co=256
-colorscheme molokai
-let g:rehash256=1
-let g:molokai_original=1
-
-highlight LineNr term=underline ctermfg=DarkGrey ctermbg=234 guifg=#BCBCBC guibg=#232526
-
-" override Search color
-highlight Search ctermfg=black ctermbg=yellow
-
-" Highlight lines over line length in light blue
-highlight LineOverflow cterm=underline
-let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
-autocmd VimEnter * autocmd WinEnter * let w:created=1
-autocmd VimEnter * let w:created=1
-autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1) | endif
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => User
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-filetype on
-filetype plugin on
-filetype indent on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tab settings
@@ -84,6 +57,27 @@ autocmd FileType css 			set softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType ejs 			set softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType javascript 	set softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType ruby           set softtabstop=2 shiftwidth=2 expandtab
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Color Scheme
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let &t_Co=256
+colorscheme molokai
+let g:rehash256=1
+let g:molokai_original=1
+
+highlight LineNr term=underline ctermfg=DarkGrey ctermbg=234 guifg=#BCBCBC guibg=#232526
+
+" override Search color
+highlight Search ctermfg=black ctermbg=yellow
+
+" Highlight lines over line length in light blue
+highlight LineOverflow cterm=underline
+let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
+autocmd VimEnter * autocmd WinEnter * let w:created=1
+autocmd VimEnter * let w:created=1
+autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1) | endif
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
