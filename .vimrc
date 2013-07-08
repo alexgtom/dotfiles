@@ -81,11 +81,12 @@ set sidescroll=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Color Scheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" molokai settings
 let &t_Co=256
 colorscheme molokai
 let g:rehash256=1
 let g:molokai_original=1
-
 
 " override Search color
 highlight Search ctermfg=black ctermbg=yellow
@@ -97,12 +98,15 @@ autocmd VimEnter * autocmd WinEnter * let w:created=1
 autocmd VimEnter * let w:created=1
 autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1) | endif
 
+" pyflakes error highlighting
+highlight clear SpellBad
+highlight SpellBad ctermbg=red ctermfg=white
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>n :NERDTreeToggle<CR>
-set pastetoggle=<F3>
 map <leader>o :BufExplorer<cr>
 map <leader>m :CtrlPMRU<CR>
 nmap <leader>tb :TagbarToggle<CR>
@@ -246,17 +250,11 @@ let g:Tex_CompileRule_dvi='latex --src-specials -interaction=nonstopmode $*'
 "let g:Tex_ViewRule_dvi = 'xdvi -editor "vim  --servername xdvi --remote +\%l \%f" $* &'
 "let g:Tex_ViewRuleComplete_dvi = 'xdvi -editor "vim --servername xdiv --remote +\%l \%f" $* &'
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => PyFlakes
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-highlight clear SpellBad
-highlight SpellBad ctermbg=red ctermfg=white
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fugitive
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufReadPost fugitive://* set bufhidden=delete
-"set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic
