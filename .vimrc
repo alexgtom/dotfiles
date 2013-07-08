@@ -58,6 +58,9 @@ autocmd FileType ejs 			set softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType javascript 	set softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType ruby           set softtabstop=2 shiftwidth=2 expandtab
 
+" Display tabs and trailing spaces visually
+set list listchars=tab:\ \ ,trail:·
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Color Scheme
@@ -72,7 +75,6 @@ let g:molokai_original=1
 highlight Search ctermfg=black ctermbg=yellow
 
 " Highlight lines over line length in light blue
-highlight LineNr term=underline ctermfg=DarkGrey ctermbg=234 guifg=#BCBCBC guibg=#232526
 highlight LineOverflow cterm=underline
 let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
 autocmd VimEnter * autocmd WinEnter * let w:created=1
