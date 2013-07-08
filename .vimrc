@@ -111,6 +111,13 @@ set lbr
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Print options
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set tw=86
+set printoptions=syntax:n,number:n,header:0,paper:letter,formfeed:y
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell Check
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType tex setlocal spell spelllang=en_us
@@ -146,11 +153,6 @@ autocmd FileType javascript map <F5> :call CompileRunJs()<CR>
 autocmd FileType ruby map <F5> :call CompileRunRb()<CR>
 autocmd FileType python map <F6> :call PyDoctest()<CR>
 autocmd FileType python map <F4> :call PyInteractive()<CR>
-
-"func! CompileViewLatex()
-"	exec "w"
-"	exec "!pdflatex %"
-"endfunc
 
 func! CompileRunGcc()
  	exec "w"
@@ -231,12 +233,6 @@ func! PyInteractive()
 endfunc
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Print options
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set tw=86
-set printoptions=syntax:n,number:n,header:0,paper:letter,formfeed:y
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-latexsuite
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set grepprg=grep\ -nH\ $*
@@ -253,22 +249,10 @@ let g:Tex_CompileRule_dvi='latex --src-specials -interaction=nonstopmode $*'
 "let g:Tex_ViewRuleComplete_dvi = 'xdvi -editor "vim --servername xdiv --remote +\%l \%f" $* &'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Pydiction
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:pydiction_location = '~/.vim/ftplugin/pydiction/complete-dict'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => PyFlakes
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 highlight clear SpellBad
 highlight SpellBad ctermbg=red ctermfg=white
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Command T
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let CommandTMaxFiles = 20000
-"nnoremap <silent> <Leader>t :CommandT<CR>
-"nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fugitive
@@ -277,39 +261,12 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 "set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Powerline
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:Powerline_symbols = 'compatible'
-set encoding=utf8
-set laststatus=2
-"set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-set noshowmode
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => SuperTab
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-let g:SuperTabDefaultCompletionType = "context"
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "let g:syntastic_python_checkers = ['pep8', 'pyflakes']
 let g:syntastic_python_checkers = ['pyflakes']
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_auto_loc_list = 1
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => indent guides
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-hi IndentGuidesEven ctermbg=234
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => python mode
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:pymode_lint = 0
-let g:pymode_run_key = 'R'
-let g:pymode_folding = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => airline
