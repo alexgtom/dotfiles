@@ -100,8 +100,8 @@ autocmd VimEnter * let w:created=1
 autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1) | endif
 
 " pyflakes error highlighting
-highlight clear SpellBad
-highlight SpellBad ctermbg=red ctermfg=white
+"highlight clear SpellBad
+"highlight SpellBad ctermbg=red ctermfg=white
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -184,7 +184,6 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 "let g:syntastic_python_checkers = ['pep8', 'pyflakes']
 let g:syntastic_python_checkers = ['pyflakes']
 let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_auto_loc_list = 1
 
 
 " Load Vundle

@@ -51,8 +51,8 @@ export PATH=$PATH:/usr/local/share/python
 export WORKON_HOME="~/.virtualenvs"
 [ -r "$(which virtualenvwrapper_lazy.sh)" ] && source "$(which virtualenvwrapper_lazy.sh)"
 
-alias vimrc='vi ~/.vimrc'
-alias zshrc='vi ~/.zshrc'
+alias vimrc='vi ~/dotfiles/.vimrc'
+alias zshrc='vi ~/dotfiles/.zshrc'
 alias dotfiles='cd ~/dotfiles'
 alias vimfiles='cd ~/.vim'
 alias bats='cd ~/bats-api'
