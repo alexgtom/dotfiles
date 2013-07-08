@@ -1,3 +1,6 @@
+" compatbility with vi
+set nocompatible
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -22,8 +25,6 @@ set wildignore=*.o,*.class,*.pyc
 set history=1000
 set undolevels=1000
 
-" compatbility with vi
-set nocompatible
 
 " bottom ruler
 set ruler
