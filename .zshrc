@@ -77,3 +77,6 @@ source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export GEM_HOME=~/.gem
 export GEM_PATH=~/.gem
+
+
+source /usr/local/etc/profile.d/z.sh
