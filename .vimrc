@@ -275,40 +275,8 @@ let g:airline_right_sep=''
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_cmd = 'CtrlPMixed'
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vundle
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set rtp+=~/.vim/vundle/
-call vundle#rc()
 
-Bundle 'gmarik/vundle'
-
-Bundle 'jcf/vim-latex'
-Bundle 'sukima/xmledit'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'vim-scripts/javacomplete'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-fugitive'
-Bundle 'godlygeek/tabular'
-Bundle 'tpope/vim-pathogen'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-rake'
-Bundle 'vim-scripts/bufexplorer.zip'
-Bundle 'Raimondi/delimitMate'
-Bundle 'tpope/vim-rails'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-haml'
-Bundle 'groenewege/vim-less'
-Bundle 'tpope/vim-endwise'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'majutsushi/tagbar'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'nvie/vim-flake8'
-Bundle 'mileszs/ack.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'hynek/vim-python-pep8-indent'
-Bundle 'juvenn/mustache.vim'
-Bundle 'bling/vim-airline'
+" Load Vundle
+if filereadable(expand("~/.vim/vundles.vim"))
+  source ~/.vim/vundles.vim
+endif
