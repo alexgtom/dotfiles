@@ -152,6 +152,16 @@ cmap w!! w !sudo tee % >/dev/null
 nnoremap j gj
 nnoremap k gk
 
+" Clear serach results
+noremap <silent><Leader>/ :nohls<CR>
+
+" highlight line and only highlight line in one window at a time
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Print options
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
