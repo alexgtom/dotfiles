@@ -30,6 +30,11 @@ syntax on
 " strip trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
+" turn off swap files
+set noswapfile
+set nobackup
+set nowb
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Color Scheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -42,9 +47,6 @@ highlight LineNr term=underline ctermfg=DarkGrey ctermbg=234 guifg=#BCBCBC guibg
 
 " override Search color
 highlight Search ctermfg=black ctermbg=yellow
-
-" backup dir
-set dir=~/.vimbackup
 
 " Highlight lines over line length in light blue
 highlight LineOverflow cterm=underline
