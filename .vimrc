@@ -35,10 +35,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let &t_Co=256
 colorscheme molokai
-let g:molokai_original=0
-"set background=dark
-"colorscheme solarized
-"let g:solarized_termcolors=256
+let g:rehash256=1
+let g:molokai_original=1
 
 highlight LineNr term=underline ctermfg=DarkGrey ctermbg=234 guifg=#BCBCBC guibg=#232526
 
