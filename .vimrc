@@ -61,6 +61,17 @@ autocmd FileType ruby           set softtabstop=2 shiftwidth=2 expandtab
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 
+set nowrap      " Don't wrap lines
+set linebreak   " Wrap lines at convenient points
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Scrolling
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set scrolloff=8         "Start scrolling when we're 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Color Scheme
