@@ -67,12 +67,12 @@ colorscheme molokai
 let g:rehash256=1
 let g:molokai_original=1
 
-highlight LineNr term=underline ctermfg=DarkGrey ctermbg=234 guifg=#BCBCBC guibg=#232526
 
 " override Search color
 highlight Search ctermfg=black ctermbg=yellow
 
 " Highlight lines over line length in light blue
+highlight LineNr term=underline ctermfg=DarkGrey ctermbg=234 guifg=#BCBCBC guibg=#232526
 highlight LineOverflow cterm=underline
 let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
 autocmd VimEnter * autocmd WinEnter * let w:created=1
