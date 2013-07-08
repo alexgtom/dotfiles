@@ -112,6 +112,45 @@ map <leader>o :BufExplorer<cr>
 map <leader>m :CtrlPMRU<CR>
 nmap <leader>tb :TagbarToggle<CR>
 
+nnoremap <silent> <C-b> :CtrlPBuffer<cr>
+
+"make Y consistent with C and D
+nnoremap Y y$
+
+
+"Move back and forth through previous and next buffers
+"with ,z and ,x
+nnoremap <silent> ,z :bp<CR>
+nnoremap <silent> ,x :bn<CR>
+
+
+" ==============================
+" Window/Tab/Split Manipulation
+" ==============================
+" Move between split windows by using the four directions H, L, I, N
+" (note that  I use I and N instead of J and K because  J already does
+" line joins and K is mapped to GitGrep the current word
+nnoremap <silent> <C-h> <C-w>h
+nnoremap <silent> <C-l> <C-w>l
+nnoremap <silent> <C-k> <C-w>k
+nnoremap <silent> <C-j> <C-w>j
+
+" Create window splits easier. The default
+" way is Ctrl-w,v and Ctrl-w,s. I remap
+" this to vv and ss
+nnoremap <silent> vv <C-w>v
+nnoremap <silent> ss <C-w>s
+
+"(v)im (r)eload
+nmap <silent> ,vr :so %<CR>
+
+" w!! to write a file as sudo
+" stolen from Steve Losh
+cmap w!! w !sudo tee % >/dev/null
+
+" Wrapped lines goes down/up to next row, rather than next line in file.
+nnoremap j gj
+nnoremap k gk
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Print options

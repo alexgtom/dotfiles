@@ -2,3 +2,4 @@
 " => ctrlp
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_by_filename = 1
