@@ -32,6 +32,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'hynek/vim-python-pep8-indent'
 Bundle 'juvenn/mustache.vim'
 Bundle 'bling/vim-airline'
+Bundle 'tpope/vim-dispatch'
 
 " for omnicompletion
 Bundle 'vim-scripts/pythoncomplete'
