@@ -37,11 +37,7 @@ plugins=(git osx)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=~/bin
-export PATH=$PATH:/usr/local/bin
-export PATH=$PATH:/usr/bin
-export PATH=$PATH:/bin
-export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin
+export PATH=$PATH:~/bin
 export PATH=$PATH:/usr/local/share/npm/bin
 export PATH=$PATH:~/adt-bundle-mac-x86_64/sdk/platform-tools
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -67,12 +63,8 @@ export EDITOR=vi
 
 export ANDROIDSDK=~/adt-bundle-mac-x86_64/sdk
 
-# for work
-workon bats
-
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
 
 source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
