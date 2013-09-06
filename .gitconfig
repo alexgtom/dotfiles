@@ -1,6 +1,6 @@
 [user]
 	name = Alex Tom
-	email = alexgtom@gmail.com
+	email = alexgtom@berkeley.edu
 [core]
 	excludefiles = /Users/alexgtom/dotfiles/.cvsignore
 	excludesfile = ~/.cvsignore

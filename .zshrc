@@ -47,6 +47,7 @@ export PATH=$PATH:~/adt-bundle-mac-x86_64/sdk/platform-tools
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/.gem/bin # Add RVM to PATH for scripting
 export PATH=$PATH:/usr/local/share/python
+export PATH=$PATH:/usr/texbin
 
 export WORKON_HOME="~/.virtualenvs"
 [ -r "$(which virtualenvwrapper_lazy.sh)" ] && source "$(which virtualenvwrapper_lazy.sh)"
