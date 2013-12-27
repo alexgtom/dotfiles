@@ -30,17 +30,53 @@ set undolevels=1000
 set ruler
 
 " strip trailing whitespace on save
-autocmd BufWritePre * :%s/\s\+$//e
+"autocmd BufWritePre * :%s/\s\+$//e
 
 " turn off swap files
 set noswapfile
 set nobackup
 set nowb
 
+set undodir=~/.vim/tmp/undo//     " undo files
+set backupdir=~/.vim/tmp/backup// " backups
+set directory=~/.vim/tmp/swap//   " swap files
+
 " persistent undo
 silent !mkdir ~/.vim/backups > /dev/null 2>&1
 set undodir=~/.vim/backups
 set undofile
+
+" Resize splits when the window is resized
+au VimResized * :wincmd ="
+
+" Make sure Vim returns to the same line when you reopen a file.
+augroup line_return
+    au!
+    au BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \     execute 'normal! g`"zvzz' |
+        \ endif
+augroup END
+
+" searching
+set ignorecase
+set smartcase
+set incsearch
+set showmatch
+set hlsearch
+
+" Return to last edit position when opening files (You want this!)
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
+
+" Remember info about open buffers on close
+set viminfo^=%
+
+" ctags
+set tags=./tags;$HOME
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tab settings
@@ -53,7 +89,6 @@ set smarttab
 set cindent
 set smartindent
 set autoindent
-set hlsearch
 
 " Language specfic tab settings
 autocmd FileType python 		set softtabstop=4 shiftwidth=4 expandtab
@@ -63,12 +98,13 @@ autocmd FileType css 			set softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType ejs 			set softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType javascript 	set softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType ruby           set softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType cpp            set softtabstop=2 shiftwidth=2 expandtab
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 
 set nowrap      " Don't wrap lines
-set linebreak   " Wrap lines at convenient points
+"set linebreak   " Wrap lines at convenient points
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -93,11 +129,11 @@ let g:molokai_original=1
 highlight Search ctermfg=black ctermbg=yellow
 
 " Highlight lines over line length in light blue
-highlight LineOverflow cterm=underline
-let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
-autocmd VimEnter * autocmd WinEnter * let w:created=1
-autocmd VimEnter * let w:created=1
-autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1) | endif
+"highlight LineOverflow cterm=underline
+"let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
+"autocmd VimEnter * autocmd WinEnter * let w:created=1
+"autocmd VimEnter * let w:created=1
+"autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1) | endif
 
 " pyflakes error highlighting
 "highlight clear SpellBad
@@ -110,6 +146,7 @@ autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '
 map <leader>n :NERDTreeToggle<CR>
 map <leader>o :BufExplorer<cr>
 map <leader>m :CtrlPMRU<CR>
+map <C-f> :CtrlPTag<CR>
 nmap <leader>tb :TagbarToggle<CR>
 
 nnoremap <silent> <C-b> :CtrlPBuffer<cr>
@@ -130,10 +167,14 @@ nnoremap <silent> ,x :bn<CR>
 " Move between split windows by using the four directions H, L, I, N
 " (note that  I use I and N instead of J and K because  J already does
 " line joins and K is mapped to GitGrep the current word
-nnoremap <silent> <C-h> <C-w>h
-nnoremap <silent> <C-l> <C-w>l
-nnoremap <silent> <C-k> <C-w>k
-nnoremap <silent> <C-j> <C-w>j
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+
+" <C-j> jumps in LaTeX suite, remap it to <C-g>
+imap <C-g> <Plug>IMAP_JumpForward
+nmap <C-g> <Plug>IMAP_JumpForward
 
 " Create window splits easier. The default
 " way is Ctrl-w,v and Ctrl-w,s. I remap
@@ -162,11 +203,18 @@ augroup CursorLine
   au WinLeave * setlocal nocursorline
 augroup END
 
+
+" Close the current buffer
+map <leader>bd :bd<cr>
+
+" Close all the buffers
+map <leader>ba :1,1000 bd!<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Print options
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set tw=86
-set printoptions=syntax:n,number:n,header:0,paper:letter,formfeed:y
+"set tw=86
+"set printoptions=syntax:n,number:n,header:0,paper:letter,formfeed:y
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
