@@ -77,6 +77,13 @@ set viminfo^=%
 " ctags
 set tags=./tags;$HOME
 
+" visual autocomplete for command menu
+set wildmenu
+
+set lazyredraw
+
+" Always show the status line
+set laststatus=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tab settings
@@ -147,7 +154,8 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>o :BufExplorer<cr>
 map <leader>m :CtrlPMRU<CR>
 map <C-f> :CtrlPTag<CR>
-nmap <leader>tb :TagbarToggle<CR>
+map <leader>t :TagbarToggle<CR>
+map <leader>u :UndotreeToggle<CR>
 
 nnoremap <silent> <C-b> :CtrlPBuffer<cr>
 
@@ -243,6 +251,10 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 let g:syntastic_python_checkers = ['pyflakes']
 let g:syntastic_javascript_checkers = ['jshint']
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Ctrl-P
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 " Load Vundle
 if filereadable(expand("~/.vim/vundles.vim"))

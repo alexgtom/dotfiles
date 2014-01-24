@@ -16,6 +16,9 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'mileszs/ack.vim'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-vinegar'
+Bundle 'majutsushi/tagbar'
+Bundle 'tpope/vim-fugitive'
+Bundle 'mbbill/undotree'
 
 " syntax specific
 Bundle 'jcf/vim-latex'
