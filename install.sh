@@ -17,3 +17,6 @@ ln -si {dotfiles/,}.gitconfig ; \
 cd -
 
 mkdir -p ~/.vimbackup
+
+# install vim plugins with vundle
+vim +BundleInstall +qall
