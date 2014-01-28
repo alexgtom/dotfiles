@@ -32,7 +32,7 @@ ZSH_THEME="clean"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx)
+plugins=(git osx zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -67,10 +67,5 @@ export ANDROIDSDK=~/adt-bundle-mac-x86_64/sdk
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 export GEM_HOME=~/.gem
 export GEM_PATH=~/.gem
-
-
-source /usr/local/etc/profile.d/z.sh
