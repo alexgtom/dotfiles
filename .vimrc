@@ -153,7 +153,7 @@ highlight Search ctermfg=black ctermbg=yellow
 map <leader>n :NERDTreeToggle<CR>
 map <leader>o :BufExplorer<cr>
 map <leader>m :CtrlPMRU<CR>
-map <C-f> :CtrlPTag<CR>
+map <C-f> :CtrlPBufTagAll<CR>
 map <leader>t :TagbarToggle<CR>
 map <leader>u :UndotreeToggle<CR>
 
@@ -271,6 +271,7 @@ let g:syntastic_javascript_checkers = ['jshint']
 " => Ctrl-P
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_cmd = 'CtrlPMixed'
 
 " Load Vundle
 if filereadable(expand("~/.vim/vundles.vim"))
