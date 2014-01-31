@@ -57,6 +57,7 @@ alias bats='cd ~/bats-api'
 alias triage='cd ~/bats-api/batstriage'
 alias btl='cd ~/bats-api/batstriage/static/batstriage/js/batstriagelib'
 alias vi=vim
+alias tmux='tmux -2'
 
 export BATS=~/bats-api
 
