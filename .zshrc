@@ -46,6 +46,7 @@ export PATH=$PATH:$HOME/.gem/bin # Add RVM to PATH for scripting
 export PATH=$PATH:/usr/local/share/python
 export PATH=$PATH:/usr/texbin
 
+# virtualenvwrapper
 export WORKON_HOME="~/.virtualenvs"
 [ -r "$(which virtualenvwrapper_lazy.sh)" ] && source "$(which virtualenvwrapper_lazy.sh)"
 
@@ -53,9 +54,8 @@ alias vimrc='vi ~/dotfiles/.vimrc'
 alias zshrc='vi ~/dotfiles/.zshrc'
 alias dotfiles='cd ~/dotfiles'
 alias vimfiles='cd ~/.vim'
-alias bats='cd ~/bats-api'
-alias triage='cd ~/bats-api/batstriage'
-alias btl='cd ~/bats-api/batstriage/static/batstriage/js/batstriagelib'
+alias batsapi='workon batsapi && cd ~/bats-api'
+alias failtracer='workon failtracer && cd ~/core-os-failtracer'
 alias vi=vim
 alias tmux='tmux -2'
 
