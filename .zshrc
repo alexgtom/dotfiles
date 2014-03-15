@@ -32,7 +32,7 @@ ZSH_THEME="clean"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx zsh-syntax-highlighting)
+plugins=(git osx django zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -56,6 +56,8 @@ alias dotfiles='cd ~/dotfiles'
 alias vimfiles='cd ~/.vim'
 alias batsapi='workon batsapi && cd ~/bats-api'
 alias failtracer='workon failtracer && cd ~/core-os-failtracer'
+alias batscli='workon batscli && cd ~/bats-cli'
+alias batslib='workon batslib && cd ~/bats-lib'
 alias vi=vim
 alias tmux='tmux -2'
 
@@ -68,5 +70,5 @@ export ANDROIDSDK=~/adt-bundle-mac-x86_64/sdk
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-export GEM_HOME=~/.gem
-export GEM_PATH=~/.gem
+#export GEM_HOME=~/.gem
+#export GEM_PATH=~/.gem

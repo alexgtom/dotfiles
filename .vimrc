@@ -20,6 +20,7 @@ set bs=2
 
 " ignore these files while expanding wild chars
 set wildignore=*.o,*.class,*.pyc
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*        " Linux/MacOSX
 
 " history
 set history=1000
@@ -30,7 +31,7 @@ set undolevels=1000
 set ruler
 
 " strip trailing whitespace on save
-"autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * :%s/\s\+$//e
 
 " turn off swap files
 set noswapfile
@@ -136,11 +137,11 @@ let g:molokai_original=1
 highlight Search ctermfg=black ctermbg=yellow
 
 " Highlight lines over line length in light blue
-"highlight LineOverflow cterm=underline
-"let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
-"autocmd VimEnter * autocmd WinEnter * let w:created=1
-"autocmd VimEnter * let w:created=1
-"autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1) | endif
+highlight LineOverflow cterm=underline
+let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1)
+autocmd VimEnter * autocmd WinEnter * let w:created=1
+autocmd VimEnter * let w:created=1
+autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '\%>80v.\+', -1) | endif
 
 " pyflakes error highlighting
 "highlight clear SpellBad
@@ -263,15 +264,15 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:syntastic_python_checkers = ['pep8', 'pyflakes']
-let g:syntastic_python_checkers = ['pyflakes']
+let g:syntastic_python_checkers = ['flake8']
+"let g:syntastic_python_checkers = ['pyflakes']
 let g:syntastic_javascript_checkers = ['jshint']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ctrl-P
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_cmd = 'CtrlP'
 
 " Load Vundle
 if filereadable(expand("~/.vim/vundles.vim"))
