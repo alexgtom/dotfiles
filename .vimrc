@@ -273,6 +273,7 @@ let g:syntastic_javascript_checkers = ['jshint']
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_use_caching = 0
 
 " Load Vundle
 if filereadable(expand("~/.vim/vundles.vim"))

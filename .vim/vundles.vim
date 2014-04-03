@@ -19,6 +19,7 @@ Bundle 'tpope/vim-vinegar'
 Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mbbill/undotree'
+Bundle 'christoomey/vim-tmux-navigator'
 
 " syntax specific
 Bundle 'jcf/vim-latex'
