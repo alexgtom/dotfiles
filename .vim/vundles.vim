@@ -31,6 +31,8 @@ Bundle 'tpope/vim-endwise'
 Bundle 'hynek/vim-python-pep8-indent'
 Bundle 'juvenn/mustache.vim'
 Bundle 'pangloss/vim-javascript'
+Bundle 'tpope/vim-markdown'
+Bundle 'suan/vim-instant-markdown'
 
 " for omnicompletion
 Bundle 'vim-scripts/pythoncomplete'
