@@ -19,11 +19,12 @@ Bundle 'tpope/vim-vinegar'
 Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mbbill/undotree'
+Bundle 'tpope/vim-surround'
+Bundle 'Raimondi/delimitMate'
 
 " syntax specific
 Bundle 'jcf/vim-latex'
 Bundle 'sukima/xmledit'
-Bundle 'Raimondi/delimitMate'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-endwise'

@@ -41,8 +41,6 @@ export PATH=$PATH:~/bin
 export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:/usr/local/share/npm/bin
 export PATH=$PATH:~/adt-bundle-mac-x86_64/sdk/platform-tools
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export PATH=$PATH:$HOME/.gem/bin # Add RVM to PATH for scripting
 export PATH=$PATH:/usr/local/share/python
 export PATH=$PATH:/usr/texbin
 
@@ -67,8 +65,3 @@ export EDITOR=vi
 
 export ANDROIDSDK=~/adt-bundle-mac-x86_64/sdk
 
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-#export GEM_HOME=~/.gem
-#export GEM_PATH=~/.gem
