@@ -19,8 +19,7 @@ Bundle 'tpope/vim-vinegar'
 Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mbbill/undotree'
-Bundle 'tpope/vim-surround'
-Bundle 'Raimondi/delimitMate'
+Bundle 'christoomey/vim-tmux-navigator'
 
 " syntax specific
 Bundle 'jcf/vim-latex'
@@ -31,6 +30,8 @@ Bundle 'tpope/vim-endwise'
 Bundle 'hynek/vim-python-pep8-indent'
 Bundle 'juvenn/mustache.vim'
 Bundle 'pangloss/vim-javascript'
+Bundle 'tpope/vim-markdown'
+Bundle 'suan/vim-instant-markdown'
 
 " for omnicompletion
 Bundle 'vim-scripts/pythoncomplete'
