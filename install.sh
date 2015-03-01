@@ -14,6 +14,7 @@ ln -si {dotfiles/,}.vimrc ; \
 ln -si {dotfiles/,}.zshrc ; \
 ln -si {dotfiles/,}.octaverc ; \
 ln -si {dotfiles/,}.gitconfig ; \
+ln -si {dotfiles/,}.tmux.conf; \
 cd -
 
 mkdir -p ~/.vimbackup
