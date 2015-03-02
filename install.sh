@@ -2,6 +2,10 @@
 
 VIMHOME=~/.vim
 
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+git clone https://github.com/zsh-users/zsh-history-substring-search.git
+
 cd ~ ; \
 ln -si {dotfiles/,}.bash_profile ; \
 ln -si {dotfiles/,}.bashrc ; \
