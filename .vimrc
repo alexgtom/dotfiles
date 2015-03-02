@@ -107,6 +107,7 @@ autocmd FileType ejs 			set softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType javascript 	set softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType ruby           set softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType cpp            set softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType go             set softtabstop=4 shiftwidth=4 noexpandtab
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
@@ -269,7 +270,7 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:syntastic_python_checkers = ['flake8']
 "let g:syntastic_python_checkers = ['pyflakes']
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['jsxhint']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ctrl-P
@@ -290,3 +291,5 @@ let g:ctrlp_use_caching = 0
 if filereadable(expand("~/.vim/vundles.vim"))
   source ~/.vim/vundles.vim
 endif
+
+let g:livepreview_previewer = 'open -a Preview'

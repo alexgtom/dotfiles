@@ -20,6 +20,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mbbill/undotree'
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'xuhdev/vim-latex-live-preview'
 
 " syntax specific
 Bundle 'jcf/vim-latex'
@@ -32,6 +33,7 @@ Bundle 'juvenn/mustache.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-markdown'
 Bundle 'suan/vim-instant-markdown'
+Bundle 'mxw/vim-jsx'
 
 " for omnicompletion
 Bundle 'vim-scripts/pythoncomplete'
