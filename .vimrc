@@ -204,6 +204,7 @@ map <leader>o :BufExplorer<cr>
 map <leader>t :TagbarToggle<CR>
 map <leader>u :UndotreeToggle<CR>
 map <C-p> :FZF<CR>
+map <C-f> :FZFTags<CR>
 
 "make Y consistent with C and D
 nnoremap Y y$
@@ -316,9 +317,13 @@ let g:syntastic_python_checkers = ['flake8']
 "let g:syntastic_python_checkers = ['pyflakes']
 let g:syntastic_javascript_checkers = ['jsxhint']
 
-" Load Vundle
-if filereadable(expand("~/.vim/vundles.vim"))
-  source ~/.vim/vundles.vim
-endif
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => fzf
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+command! -bar FZFTags if !empty(tagfiles()) | call fzf#run({
+\   'source': "sed '/^\\!/d;s/\t.*//' " . join(tagfiles()) . ' | uniq',
+\   'sink':   'tag',
+\ }) | else | echo 'Preparing tags' | call system('ctags -R') | FZFTag | endif
+
 
 let g:livepreview_previewer = 'open -a Preview'
