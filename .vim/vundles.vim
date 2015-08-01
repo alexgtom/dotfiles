@@ -34,6 +34,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-markdown'
 Bundle 'suan/vim-instant-markdown'
 Bundle 'mxw/vim-jsx'
+Bundle 'saltstack/salt-vim'
 
 " for omnicompletion
 Bundle 'vim-scripts/pythoncomplete'

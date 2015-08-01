@@ -134,6 +134,10 @@ colorscheme molokai
 let g:rehash256=1
 let g:molokai_original=1
 
+"" Solarized settings
+"set background=dark
+"colorscheme solarized
+
 " override Search color
 highlight Search ctermfg=black ctermbg=yellow
 

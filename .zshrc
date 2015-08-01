@@ -22,3 +22,5 @@ source $HOME/dotfiles/zsh-history-substring-search/zsh-history-substring-search.
 # bind P and N for EMACS mode
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
+
+alias rm='nocorrect rm'
