@@ -1,6 +1,49 @@
 " compatbility with vi
 set nocompatible
 
+
+call plug#begin('~/.vim/plugged')
+" required
+Plug 'gmarik/vundle'
+
+" additional functionality
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+"Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/syntastic'
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-pathogen'
+Plug 'scrooloose/nerdcommenter'
+Plug 'airblade/vim-gitgutter'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'terryma/vim-multiple-cursors'
+Plug 'mileszs/ack.vim'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-vinegar'
+Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-fugitive'
+Plug 'mbbill/undotree'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'xuhdev/vim-latex-live-preview'
+
+" syntax specific
+Plug 'jcf/vim-latex'
+Plug 'sukima/xmledit'
+Plug 'groenewege/vim-less'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-endwise'
+Plug 'hynek/vim-python-pep8-indent'
+Plug 'juvenn/mustache.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-markdown'
+Plug 'suan/vim-instant-markdown'
+Plug 'mxw/vim-jsx'
+Plug 'saltstack/salt-vim'
+
+" for omnicompletion
+Plug 'vim-scripts/pythoncomplete'
+Plug 'vim-scripts/javacomplete'
+call plug#end()
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -158,12 +201,9 @@ autocmd WinEnter * if !exists('w:created') | let w:m2=matchadd('LineOverflow', '
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>n :NERDTreeToggle<CR>
 map <leader>o :BufExplorer<cr>
-map <leader>m :CtrlPMRU<CR>
-map <C-f> :CtrlPBufTagAll<CR>
 map <leader>t :TagbarToggle<CR>
 map <leader>u :UndotreeToggle<CR>
-
-nnoremap <silent> <C-b> :CtrlPBuffer<cr>
+map <C-p> :FZF<CR>
 
 "make Y consistent with C and D
 nnoremap Y y$
@@ -275,21 +315,6 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 let g:syntastic_python_checkers = ['flake8']
 "let g:syntastic_python_checkers = ['pyflakes']
 let g:syntastic_javascript_checkers = ['jsxhint']
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Ctrl-P
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if executable('ag')
-  let g:ackprg = 'ag --nogroup --column'
-
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_use_caching = 0
 
 " Load Vundle
 if filereadable(expand("~/.vim/vundles.vim"))
