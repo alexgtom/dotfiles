@@ -8,7 +8,7 @@ Plug 'gmarik/vundle'
 
 " additional functionality
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
-"Plug 'kien/ctrlp.vim'
+Plug 'luochen1990/rainbow'
 Plug 'scrooloose/syntastic'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-pathogen'
@@ -327,3 +327,4 @@ command! -bar FZFTags if !empty(tagfiles()) | call fzf#run({
 
 
 let g:livepreview_previewer = 'open -a Preview'
+let g:rainbow_active = 1

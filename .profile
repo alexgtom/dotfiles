@@ -11,12 +11,13 @@ alias vimrc='vi ~/dotfiles/.vimrc'
 alias zshrc='vi ~/dotfiles/.zshrc'
 alias dotfiles='cd ~/dotfiles'
 alias vimfiles='cd ~/.vim'
-alias batsapi='workon batsapi && cd ~/bats-api'
+alias batsapi='workon batsapi && cd ~/src/bats-api'
 alias failtracer='workon failtracer && cd ~/core-os-failtracer'
-alias batscli='workon batscli && cd ~/bats-cli'
-alias batslib='workon batslib && cd ~/bats-lib'
+alias batscli='workon batscli && cd ~/src/bats-cli'
+alias batslib='workon batslib && cd ~/src/bats-lib'
 alias vi=vim
 alias tmux='tmux -2'
+alias shell='workon batsapi && cd ~/src/bats-api && python manage.py shell_plus'
 
 
 # variables
