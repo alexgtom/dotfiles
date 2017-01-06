@@ -1,5 +1,6 @@
 # PATH
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
 export PATH=~/bin:$PATH
 
 # virtualenvwrapper
@@ -29,8 +30,5 @@ export PATH=$PATH:$GOPATH/bin
 # rdb
 export RDB_ATTACHMENT_DIRECTORY=$HOME/go/src/apple.com/rdb
 
-
-# docker
-export DOCKER_CERT_PATH=/Users/alexgtom/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-export DOCKER_HOST=tcp://192.168.59.103:2376
+# fzf respect gitignore
+export FZF_DEFAULT_COMMAND='ag -g ""'

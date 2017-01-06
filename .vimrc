@@ -315,7 +315,7 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:syntastic_python_checkers = ['flake8']
 "let g:syntastic_python_checkers = ['pyflakes']
-let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_checkers = ['eslint']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => fzf
