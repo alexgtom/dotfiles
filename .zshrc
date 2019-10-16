@@ -15,8 +15,6 @@ if [ -f $HOME/.profile ]; then
    source $HOME/.profile
 fi
 
-eval "$(rbenv init -)"
-
 source $HOME/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/dotfiles/zsh-history-substring-search/zsh-history-substring-search.zsh
 

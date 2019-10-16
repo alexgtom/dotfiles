@@ -33,15 +33,17 @@ Plug 'tpope/vim-haml'
 Plug 'tpope/vim-endwise'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'juvenn/mustache.vim'
-Plug 'pangloss/vim-javascript'
+Plug 'isRuslan/vim-es6'
+" Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-markdown'
 Plug 'suan/vim-instant-markdown'
 Plug 'mxw/vim-jsx'
 Plug 'saltstack/salt-vim'
 
 " for omnicompletion
-Plug 'vim-scripts/pythoncomplete'
+" Plug 'vim-scripts/pythoncomplete'
 Plug 'vim-scripts/javacomplete'
+Plug 'davidhalter/jedi-vim'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -74,7 +76,7 @@ set undolevels=1000
 set ruler
 
 " strip trailing whitespace on save
-autocmd BufWritePre * :%s/\s\+$//e
+"autocmd BufWritePre * :%s/\s\+$//e
 
 " turn off swap files
 set noswapfile
@@ -278,7 +280,9 @@ endif
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
-  set ttymouse=xterm2
+  if !has('nvim')
+    set ttymouse=xterm2
+  endif
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -303,7 +307,7 @@ autocmd BufRead,BufNewFile *.md set spell
 " Enable omni completion. (Ctrl-X Ctrl-O)
 autocmd FileType ejs,html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType c setlocal omnifunc=ccomplete#Complete

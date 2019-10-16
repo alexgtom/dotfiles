@@ -16,7 +16,7 @@ alias batsapi='workon batsapi && cd ~/src/bats-api'
 alias failtracer='workon failtracer && cd ~/core-os-failtracer'
 alias batscli='workon batscli && cd ~/src/bats-cli'
 alias batslib='workon batslib && cd ~/src/bats-lib'
-alias vi=vim
+alias vi=nvim
 alias tmux='tmux -2'
 alias shell='workon batsapi && cd ~/src/bats-api && python manage.py shell_plus'
 
